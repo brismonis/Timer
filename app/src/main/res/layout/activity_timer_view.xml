@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bair_susanne.uniulm.timer.TimerView">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Name your Timer"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:onClick="changeName"
+        android:text="CHANGE NAME"
+        app:layout_constraintBaseline_toBaselineOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/name" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="100dp"
+        android:text="START"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimeCount" />
+
+    <TextView
+        android:id="@+id/tvTimeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/edtTimerValue2"
+        android:layout_width="82dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:hint="Minutes"
+        android:inputType="time"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtTimerValue1"
+        app:layout_constraintEnd_toStartOf="@+id/edtTimerValue3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtTimerValue1" />
+
+    <EditText
+        android:id="@+id/edtTimerValue1"
+        android:layout_width="82dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Hours"
+        android:inputType="time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimeCount" />
+
+    <EditText
+        android:id="@+id/edtTimerValue3"
+        android:layout_width="82dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="Seconds"
+        android:inputType="time"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtTimerValue2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="100dp"
+        android:text="STOP"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimeCount" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="save"
+        android:text=" SAVE TIMER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
